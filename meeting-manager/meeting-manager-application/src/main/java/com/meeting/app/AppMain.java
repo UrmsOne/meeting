@@ -16,6 +16,7 @@ import java.util.Scanner;
  * Time: 22:28
  * Description:
  */
+//项目调用入口
 public class AppMain {
     private final static Logger logger = LoggerFactory.getLogger(AppMain.class);
     public static void main(String[] args) {
