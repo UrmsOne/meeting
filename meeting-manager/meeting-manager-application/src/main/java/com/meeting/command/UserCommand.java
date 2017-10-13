@@ -153,6 +153,7 @@ public class UserCommand {
         }
         catch (ParseException e) {
             hf.printHelp("testApp", options, true);
+            System.out.println("注册命令样式：" + "register -h -u user -p passward -e email -pn phone");
         }
     }
 

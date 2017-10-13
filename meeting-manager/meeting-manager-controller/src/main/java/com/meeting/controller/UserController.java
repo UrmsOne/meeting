@@ -24,7 +24,7 @@ public class UserController {
         login.setPassword(password);
         login.setUsername(username);
         //调用service去登陆
-        logger.debug("去登陆！");
+        logger.debug("正在登陆！");
         login = userService.login(login);
         Login.setUser(login);
         logger.debug("登陆成功了！");
