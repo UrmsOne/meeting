@@ -74,6 +74,7 @@ public class UserCommand {
             }
         } catch (ParseException e) {
             hf.printHelp("testApp", options, true);
+            System.out.println("登录命令样式：" + "login -h -u user -p password");
         }
         return user;
     }
