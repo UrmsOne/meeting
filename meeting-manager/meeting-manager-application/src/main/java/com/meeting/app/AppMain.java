@@ -49,15 +49,22 @@ public class AppMain {
                         case "lgout":
                             userCommand.lgout(arg);
                             break;
-                        case "deleteMe":
+                        case "deleteMe":                                          //Urms
                             System.out.println("输入y确定删除/输入n取消");
                             String s1 = scanner.nextLine();
+                            while(!"y".equals(s1)&&!"n".equals(s1)){
+                                System.out.println("输入错误请重新输入");
+                                //System.out.println("输入y确定/n取消");
+                                s1 = scanner.nextLine();
+                            }
+
                             if ("y".equals(s1)) {
                                 System.out.println("成功删除用户！");             //Urms
                                 userCommand.deleteMe(arg);
                             }else if("n".equals(s1)){                             //Urms
                                 System.out.println("取消删除！");
                             }
+//                            userCommand.loginOptions(arg);
                             break;
                         case "createAgenda":
                             agendaCommand.createAgenda(arg);
@@ -78,15 +85,26 @@ public class AppMain {
                         case "rejectOne":
                             agendaCommand.rejectOne(arg);
                             break;
-                        case "clearAllAgenda":
-                            System.out.println("输入y确定");
+                        case "clearAllAgenda":                                       //Urms
+
+                            System.out.println("输入y确定/n取消");
                             String s2 = scanner.nextLine();
+                            while(!"y".equals(s2)&&!"n".equals(s2)){
+                                System.out.println("输入错误请重新输入");
+                                //System.out.println("输入y确定/n取消");
+                                s2 = scanner.nextLine();
+                            }
                             if ("y".equals(s2)){
                                 agendaCommand.clearAllAgenda(arg);
+                            }else if("n".equals(s2)){
+                                System.out.println("已撤销取消会议操作！");
                             }
                             break;
                         default:
+
+                            System.out.println("非法输入，请重新输入！");
                             HelpPrint.print();
+
                             break;
                     }
                 }
