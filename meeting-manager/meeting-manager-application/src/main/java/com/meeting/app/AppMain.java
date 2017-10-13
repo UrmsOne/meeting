@@ -16,7 +16,7 @@ import java.util.Scanner;
  * Time: 22:28
  * Description:
  */
-//项目调用入口
+//项目运行入口
 public class AppMain {
     private final static Logger logger = LoggerFactory.getLogger(AppMain.class);
     public static void main(String[] args) {
@@ -50,10 +50,13 @@ public class AppMain {
                             userCommand.lgout(arg);
                             break;
                         case "deleteMe":
-                            System.out.println("输入y确定");
+                            System.out.println("输入y确定删除/输入n取消");
                             String s1 = scanner.nextLine();
                             if ("y".equals(s1)) {
+                                System.out.println("成功删除用户！");             //Urms
                                 userCommand.deleteMe(arg);
+                            }else if("n".equals(s1)){                             //Urms
+                                System.out.println("取消删除！");
                             }
                             break;
                         case "createAgenda":
